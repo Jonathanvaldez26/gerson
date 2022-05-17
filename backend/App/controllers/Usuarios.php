@@ -65,7 +65,7 @@ class Usuarios extends Controller
 
             <meta charset="utf-8" />
             <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-            <link rel="icon" type="image/png" href="../../assets/img/favicon.png">
+            <link rel="icon" type="image/png" href="../../assets/img/neuro_negro.png">
 
             <!--     Fonts and icons     -->
             <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
@@ -137,7 +137,7 @@ html;
 //             <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
 
 //             <a class="navbar-brand m-0" href="/Principal/" target="_blank">
-//                 <img src="/assets/img/favicon.png" class="navbar-brand-img h-100" alt="main_logo">
+//                 <img src="/assets/img/neuro_negro.png" class="navbar-brand-img h-100" alt="main_logo">
 //                 <span class="ms-1 font-weight-bold"></span>
 //                 <p style="margin-top: 15px;"><span class="fa fa-user morado-musa-text"></span> {$_SESSION['nombre']}</p>
 //             </a>
@@ -1469,7 +1469,7 @@ html;
         //$num_linea =utf8_decode("Línea: 39");
         //$num_linea2 =utf8_decode("Línea: 39");
 
-        $pdf->SetXY(8, 355);
+        $pdf->SetXY(5, 327);
         $pdf->SetFont('Arial', 'B', 25);
         #4D9A9B
         $pdf->SetTextColor(0, 0, 0);

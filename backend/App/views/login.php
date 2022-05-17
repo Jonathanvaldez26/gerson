@@ -6,7 +6,7 @@
         <section>
         <style>
             .bg-gradient-musa {
-                background-image: linear-gradient(0deg, turquoise, pink 75%);
+                background-image: linear-gradient(0deg, yellow, orange 75%);
             }
 
             .bg-gradient-pink-white {
@@ -18,11 +18,11 @@
             }
 
             .morado-musa-text{
-                color: rgb(98 56 246);
+                color: orange;
             }
 
             .bg-musa-morado{
-                background-color: rgb(98 56 246);
+                background-color: orange;
             }
 
             .bg-pink{
@@ -40,7 +40,7 @@
                             <div class="card card-plain mt-8">
                                 <div class="card-header pb-0 text-start">
                                     <h3 class="font-weight-bolder morado-musa-text">GRUPO LAHE</h3>
-                                    <h5 class="font-weight-bolder morado-musa-text">Administrador MUSA 2022</h5>
+                                    <h5 class="font-weight-bolder morado-musa-text">Administrador Sociedad Mexicana de Neurología Pediátrica 2022</h5>
                                     <p class="mb-0">Introduce tus credenciales para iniciar sesión.</p>
                                 </div>
                                 <div class="card-body">
