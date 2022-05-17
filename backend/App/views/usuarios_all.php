@@ -272,7 +272,7 @@
                                 <label class="control-label col-md-12 col-sm-1 col-xs-12" for="prefijo">Tipo <span class="required">*</span></label>
                                 <select class="multisteps-form__select form-control all_input_select" name="identificador" id="identificador" readonly>
                                     <option value="2" selected>Compra</option>
-                                                                        
+
                                 </select>
                             </div>
 
@@ -312,7 +312,7 @@
                                 <label class="control-label col-md-12 col-sm-1 col-xs-12" for="estado">Estado <span class="required">*</span></label>
                                 <select class="multisteps-form__select form-control all_input_select" name="estado" id="estado" required disabled>
                                     <option value="" selected>Selecciona una Opción</option>
-                                    
+
                                 </select>
                             </div>
 
@@ -327,6 +327,47 @@
             </div>
         </div>
     </div>
+
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="modal_gafete" tabindex="-1" role="dialog" aria-labelledby="modal_gafeteLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">
+                        Crear Gafete
+                    </h5>
+
+                    <span type="button" class="btn bg-gradient-danger" data-dismiss="modal" aria-label="Close">
+                        X
+                    </span>
+                </div>
+                <div class="modal-body">
+                    <form action="/Usuarios/abrirpdfGafetePersonalizado" method="post" target="_blank">
+                        <div class="form-group row">
+                            <div class="form-group col-md-6">
+                                <label class="control-label col-md-12 col-sm-1 col-xs-12" for="nombre_gafete">Nombres <span class="required">*</span></label>
+                                <input type="text" class="form-control" id="nombre_gafete" name="nombre_gafete" placeholder="Nombre" require>
+                            </div>
+
+                            <div class="form-group col-md-6">
+                                <label class="control-label col-md-12 col-sm-1 col-xs-12" for="apellido_gafete">Apellidos <span class="required">*</span></label>
+                                <input type="text" class="form-control" id="apellido_gafete" name="apellido_gafete" placeholder="Apellido Paterno" require>
+                            </div>
+
+                        </div>
+                        <div class="modal-footer">
+
+                        <button type="submit" class="btn bg-gradient-success">Aceptar</button>
+                                <button type="button" class="btn bg-gradient-secondary" data-dismiss="modal">Cancelar</button>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
 </body>
 
 <?php echo $footer; ?>
@@ -629,7 +670,7 @@
         });
 
 
-        $("#form_datos").on("submit",function(event){
+        $("#form_datos").on("submit", function(event) {
             event.preventDefault();
             var formData = new FormData(document.getElementById("form_datos"));
 
@@ -645,20 +686,20 @@
                 beforeSend: function() {
                     console.log("Procesando....");
                     // alert('Se está borrando');
-                    
+
                 },
                 success: function(respuesta) {
                     console.log(respuesta);
 
-                    if(respuesta == 'success'){
+                    if (respuesta == 'success') {
                         Swal.fire("¡Se creo el usuario correctamente!", "", "success").
-                            then((value) => {
-                                window.location.reload();
+                        then((value) => {
+                            window.location.reload();
                         });
-                    }else{
+                    } else {
                         Swal.fire("¡Hubo un error al crear el usuario!", "", "warning").
-                            then((value) => {
-                                window.location.reload();
+                        then((value) => {
+                            window.location.reload();
                         });
                     }
                 },
@@ -673,7 +714,7 @@
             });
         });
 
-        $(".form_datos_edit").on("submit",function(event){
+        $(".form_datos_edit").on("submit", function(event) {
             event.preventDefault();
             // var formData = new FormData(document.getElementById("form_datos_edit"));
             var formData = $(this).serialize();
@@ -692,20 +733,20 @@
                 beforeSend: function() {
                     console.log("Procesando....");
                     // alert('Se está borrando');
-                    
+
                 },
                 success: function(respuesta) {
                     console.log(respuesta);
 
-                    if(respuesta == 'success'){
+                    if (respuesta == 'success') {
                         Swal.fire("¡Se actualizo el usuario correctamente!", "", "success").
-                            then((value) => {
-                                window.location.reload();
+                        then((value) => {
+                            window.location.reload();
                         });
-                    }else{
+                    } else {
                         Swal.fire("¡Hubo un error al actualizar el usuario!", "", "warning").
-                            then((value) => {
-                                window.location.reload();
+                        then((value) => {
+                            window.location.reload();
                         });
                     }
                 },
@@ -733,11 +774,11 @@
                     console.log(data)
                     if (data == "true") {
                         //el usuario ya existe
-                        $("#msg_email").css('color','red');
+                        $("#msg_email").css('color', 'red');
                         $("#msg_email").html('Este correo ya se ha registrado');
 
                     } else {
-                        $("#msg_email").css('color','red');
+                        $("#msg_email").css('color', 'red');
                         $("#msg_email").html('');
                     }
                 }

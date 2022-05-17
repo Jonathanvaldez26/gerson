@@ -1324,6 +1324,7 @@ html;
                 <td>
                      <button class="btn bg-gradient-primary mb-0 btn-icon-only" type="button" title="Editar Usuario" data-toggle="modal" data-target="#editar-usuario{$value['id_registrado']}"><i class="fa fa-edit" aria-hidden="true"></i></button>
                      <a href="/Usuarios/abrirpdfGafete/{$value['clave']}/asistente" class="btn mb-0 bg-pink btn-icon-only morado-musa-text" title="Imprimir Gafetes" data-bs-placement="top" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-original-title="Imprimir Gafetes" target="_blank"><i class="fas fa-print"> </i></a>
+                     <button class="btn bg-gradient-primary mb-0 btn-icon-only" title="Imprimir Gafetes Personalizados" data-bs-placement="top" data-bs-toggle="tooltip"  data-toggle="modal" data-target="#modal_gafete"><i class="fa fa-edit" aria-hidden="true"></i></button>
                 </td>
         </tr>
 html;
@@ -1450,6 +1451,46 @@ html;
         $primer_nombre = $nombre_uno[0];
 
         $nombre_completo = mb_strtoupper($primer_nombre) . "\n" . mb_strtoupper($datos_user['apellidop']);
+
+        
+
+        $pdf = new \FPDF($orientation = 'P', $unit = 'mm', array(400, 152));
+        $pdf->AddPage();
+        $pdf->SetFont('Arial', 'B', 8);    //Letra Arial, negrita (Bold), tam. 20
+        $pdf->setY(1);
+        $pdf->SetFont('Arial', 'B', 16);
+        // $pdf->Image('gafetes/gafete_asistente.jpg', 0, 0, $pdf->w, $pdf->h);
+        // $pdf->Image('gafetes/gafete_asistente.jpg', 0, 200, 153, 200);
+        $pdf->SetFont('Arial', 'B', 25);
+        // $pdf->Multicell(133, 80, $clave_ticket, 0, 'C');
+
+        //$pdf->Image('1.png', 1, 0, 190, 190);
+        $pdf->SetFont('Arial', 'B', 5);    //Letra Arial, negrita (Bold), tam. 20
+        //$nombre = utf8_decode("Jonathan Valdez Martinez");
+        //$num_linea =utf8_decode("Línea: 39");
+        //$num_linea2 =utf8_decode("Línea: 39");
+
+        $pdf->SetXY(5, 327);
+        $pdf->SetFont('Arial', 'B', 25);
+        #4D9A9B
+        $pdf->SetTextColor(0, 0, 0);
+        $pdf->Multicell(95, 10, utf8_decode($nombre_completo), 0, 'C');
+        $pdf->output();
+    }
+
+    public function abrirpdfGafetePersonalizado(){
+        $nombre = $_POST['nombre_gafete'];
+        $apellidos = $_POST['apellido_gafete'];
+ 
+        // $this->generaterQr($clave_ticket);
+        // $datos_user = UsuariosDao::getUserRegisterByClave($clave)[0];
+
+        // $nombre_uno = explode(" ", $datos_user['nombre']);
+        // $primer_nombre = $nombre_uno[0];
+
+        // $nombre_completo = mb_strtoupper($primer_nombre) . "\n" . mb_strtoupper($datos_user['apellidop']);
+
+        $nombre_completo = mb_strtoupper($nombre) . "\n" . mb_strtoupper($apellidos);
 
         
 
