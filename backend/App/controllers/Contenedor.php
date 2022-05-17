@@ -29,7 +29,7 @@ class Contenedor extends Controller{
 
             <a class="navbar-brand m-0" href="/Principal/" target="_blank">
                 <img src="/assets/img/neuro_negro.png" class="navbar-brand-img " alt="main_logo">
-                <span class="ms-1 font-weight-bold">Congreso Neurología</span>
+                <span class="ms-1 font-weight-bold">Congreso Neuropediatría</span>
                 <p style="margin-top: 15px;"><span class="fa fa-user morado-musa-text"></span> {$_SESSION['nombre']}</p>
             </a>
 

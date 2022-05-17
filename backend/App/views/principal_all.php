@@ -1,6 +1,6 @@
 <?php echo $header; ?>
 <title>
-    Principal - MUSA - GRUPO LAHE
+    Principal - Neuropediatría - GRUPO LAHE
 </title>
 <body class="g-sidenav-show  bg-gray-100">
     <!-- <aside class="bg-white-aside sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3 " id="sidenav-main">
@@ -307,7 +307,7 @@
                                 <div class="col-lg-12">
                                     <div class="card">
                                         <div class="d-flex flex-column h-100">
-                                            <h4 class="m-4">¡Bienvenido a tu administrador equipo GRUPO LAHE!<br><strong>MUSA 2022</strong></h4>
+                                            <h4 class="m-4">¡Bienvenido a tu administrador equipo GRUPO LAHE!<br><strong>Congreso Neuropediatría 2022</strong></h4>
                                         </div>
                                     </div>
                                 </div>
@@ -325,7 +325,7 @@
                 </div>
             </div>
 
-            <div class="row" >
+            <!-- <div class="row" >
                 <div class="col-12 col-lg-6 col-md-4 position-relative z-index-2">
                     <div class="card card-plain">
                         <div class="card-body p-3">
@@ -478,7 +478,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <div class="row">
                 <div class="col-12">
                     <div id="globe" class="position-absolute end-0 top-10 mt-sm-3 mt-7 me-lg-7" style="margin-left: 30%;">

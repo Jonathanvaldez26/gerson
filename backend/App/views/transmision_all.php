@@ -1,6 +1,6 @@
 <?php echo $header; ?>
 <title>
-    Asistentes - MUSA - GRUPO LAHE
+    Asistente - Neuropediatría
 </title>
 
 <body class="g-sidenav-show  bg-gray-100">

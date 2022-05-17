@@ -54,7 +54,7 @@ $header =<<<html
 
             <meta charset="utf-8" />
             <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-            <link rel="icon" type="image/png" href="../../assets/img/favicon.png">
+            <link rel="icon" type="image/png" href="../../assets/img/neuro_negro.png">
 
             <!--     Fonts and icons     -->
             <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
@@ -126,7 +126,7 @@ $menu = <<<html
             <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
 
             <a class="navbar-brand m-0" href="/Principal/" target="_blank">
-                <img src="/assets/img/favicon.png" class="navbar-brand-img h-100" alt="main_logo">
+                <img src="/assets/img/neuro_negro.png" class="navbar-brand-img h-100" alt="main_logo">
                 <span class="ms-1 font-weight-bold"></span>
                 <p style="margin-top: 15px;"><span class="fa fa-user morado-musa-text"></span> {$_SESSION['nombre']}</p>
             </a>
@@ -212,7 +212,7 @@ $menu = <<<html
                 
                 
 
-                <li id="asistentes" class="nav-item" >
+                <!--<li id="asistentes" class="nav-item" >
                     <a href="/Asistentes/" class="nav-link " aria-controls="applicationsExamples" role="button" aria-expanded="false">
                         <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center d-flex align-items-center justify-content-center  me-2">
                             <span class="fa fa-users morado-musa-text"></span>
@@ -227,7 +227,7 @@ $menu = <<<html
                         </div>
                         <span class="nav-link-text ms-1">Vuelos</span>
                     </a>
-                </li>
+                </li>-->
                 <!--<li id="pickup" class="nav-item" >
                     <a href="/PickUp/" class="nav-link " aria-controls="ecommerceExamples" role="button" aria-expanded="false">
                         <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center d-flex align-items-center justify-content-center  me-2">
@@ -245,14 +245,14 @@ $menu = <<<html
                     </a>
                 </li>-->
                 
-                <li id="asistencias" class="nav-item" >
+                <!--<li id="asistencias" class="nav-item" >
                     <a href="/Asistencias/" class="nav-link " aria-controls="basicExamples" role="button" aria-expanded="false">
                         <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center d-flex align-items-center justify-content-center  me-2">
                             <span class="fa fa-bell morado-musa-text"></span>
                         </div>
                         <span class="nav-link-text ms-1">Asistencias</span>
                     </a>
-                </li>
+                </li>-->
                 <li id="salud" class="nav-item" >
                     <hr class="horizontal dark" />
                     <h6 class="ps-4  ms-2 text-uppercase text-xs font-weight-bolder opacity-6">PAGOS EN SITIO</h6>
@@ -265,14 +265,14 @@ $menu = <<<html
                         <span class="nav-link-text ms-1">Cobrar en Sitio</span>
                     </a>
                 </li>
-                <li id="pruebas_usuario" class="nav-item" >
+               <!-- <li id="pruebas_usuario" class="nav-item" >
                     <a href="/PruebasCovidUsuarios/" class="nav-link " aria-controls="basicExamples" role="button" aria-expanded="false">
                         <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center d-flex align-items-center justify-content-center  me-2">
                             <span class="fa fa-virus-slash morado-musa-text"></span>
                         </div>
                         <span class="nav-link-text ms-1">Pruebas Covid Usuarios</span>
                     </a>
-                </li>
+                </li>-->
 
                 <!-- <li id="pruebas_sitio" class="nav-item" >
                     <a href="/PruebasCovidEnSitio/" class="nav-link" aria-controls="basicExamples" role="button" aria-expanded="false">
