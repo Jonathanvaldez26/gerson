@@ -41,8 +41,8 @@ class PruebasCovidEnSitio extends Controller
           padding: 0px;
         }
       </style>
-      <link rel="apple-touch-icon" sizes="76x76" href="https://foromusa.com/assets/images/Musa0-01.png">
-      <link rel="icon" type="image/png" href="https://foromusa.com/assets/images/Musa0-01.png">
+      <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/neuro_negro.png">
+      <link rel="icon" type="image/png" href="/assets/img/neuro_negro.png">
 html;
 
 $extraFooter =<<<html
