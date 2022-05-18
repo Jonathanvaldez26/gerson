@@ -1328,7 +1328,7 @@ html;
 
                      <button class="btn bg-gradient-primary mb-0 btn-icon-only" title="Imprimir Gafetes Personalizados" data-bs-placement="top" data-bs-toggle="tooltip"  data-toggle="modal" data-target="#modal_gafete"><i class="fa fa-edit" aria-hidden="true"></i></button>
 
-                     <a href="/Usuarios/abrirConstancia/{$value['clave']}" class="btn mb-0 bg-pink btn-icon-only morado-musa-text" title="Imprimir Constancia" data-bs-placement="top" data-bs-toggle="tooltip"  target="_blank">Constancia</a>
+                     <a href="/Usuarios/abrirConstancia/{$value['clave']}" class="btn mb-0 bg-pink morado-musa-text" title="Imprimir Constancia" data-bs-placement="top" data-bs-toggle="tooltip"  target="_blank">Constancia</a>
                 </td>
         </tr>
 html;
