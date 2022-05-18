@@ -1328,7 +1328,9 @@ html;
 
                      <button class="btn bg-gradient-primary mb-0 btn-icon-only" title="Imprimir Gafetes Personalizados" data-bs-placement="top" data-bs-toggle="tooltip"  data-toggle="modal" data-target="#modal_gafete"><i class="fa fa-edit" aria-hidden="true"></i></button>
 
-                     <a href="/Usuarios/abrirConstancia/{$value['clave']}" class="btn mb-0 bg-pink morado-musa-text" title="Imprimir Constancia" data-bs-placement="top" data-bs-toggle="tooltip"  target="_blank">Constancia</a>
+                     <a href="/Usuarios/abrirConstancia/{$value['clave']}" class="btn mb-0 bg-pink morado-musa-text" title="Imprimir Constancia" data-bs-placement="top" data-bs-toggle="tooltip"  target="_blank">Constancia V</a>
+
+                     <a href="/Usuarios/abrirConstanciaP/{$value['clave']}" class="btn mb-0 bg-pink morado-musa-text" title="Imprimir Constancia" data-bs-placement="top" data-bs-toggle="tooltip"  target="_blank">Presencial</a>
                 </td>
         </tr>
 html;
@@ -1491,10 +1493,13 @@ html;
 
         // $nombre_uno = explode(" ", $datos_user['nombre']);
         // $primer_nombre = $nombre_uno[0];
+        $apellidos_ = explode(" ", $apellidos);
+        $primer_apellido = $apellidos_[0];
+        $segundo_apellido = $apellidos_[1];
 
         // $nombre_completo = mb_strtoupper($primer_nombre) . "\n" . mb_strtoupper($datos_user['apellidop']);
 
-        $nombre_completo = mb_strtoupper($nombre) . "\n" . mb_strtoupper($apellidos);
+        $nombre_completo = mb_strtoupper($nombre) . "\n" . mb_strtoupper($primer_apellido) . "\n" . mb_strtoupper($segundo_apellido);
 
         
 
@@ -1514,8 +1519,8 @@ html;
         //$num_linea =utf8_decode("Línea: 39");
         //$num_linea2 =utf8_decode("Línea: 39");
 
-        $pdf->SetXY(5, 327);
-        $pdf->SetFont('Arial', 'B', 25);
+        $pdf->SetXY(0, 327);
+        $pdf->SetFont('Arial', 'B', 22);
         #4D9A9B
         $pdf->SetTextColor(0, 0, 0);
         $pdf->Multicell(95, 10, utf8_decode($nombre_completo), 0, 'C');
@@ -1542,6 +1547,46 @@ html;
         $pdf->setY(1);
         $pdf->SetFont('Arial', 'B', 16);
         $pdf->Image('PDF/template/asistentes.png', 0, 0, 296, 210);
+        // $pdf->SetFont('Arial', 'B', 25);
+        // $pdf->Multicell(133, 80, $clave_ticket, 0, 'C');
+
+        //$pdf->Image('1.png', 1, 0, 190, 190);
+        $pdf->SetFont('Arial', 'B', 5);    //Letra Arial, negrita (Bold), tam. 20
+        //$nombre = utf8_decode("Jonathan Valdez Martinez");
+        //$num_linea =utf8_decode("Línea: 39");
+        //$num_linea2 =utf8_decode("Línea: 39");
+
+        $pdf->SetXY(50, 87);
+        $pdf->SetFont('Arial', 'B', 30);
+        #4D9A9B
+        $pdf->SetTextColor(0, 0, 0);
+        $pdf->Multicell(200, 10, utf8_decode($nombre_completo), 0, 'C');
+        $pdf->Output();
+        // $pdf->Output('F','constancias/'.$clave.$id_curso.'.pdf');
+
+        // $pdf->Output('F', 'C:/pases_abordar/'. $clave.'.pdf');
+    }
+
+    public function abrirConstanciaP($clave, $id_curso = null)
+    {
+
+        // $this->generaterQr($clave_ticket);
+
+        $datos_user = UsuariosDao::getUserRegisterByClave($clave)[0];
+
+        $nombre = explode(" ", $datos_user['nombre']);
+
+        // $nombre_completo = $datos_user['prefijo'] . " " . $nombre[0] . " " . $datos_user['apellidop']. " " . $datos_user['apellidom'];
+        $nombre_completo = $nombre[0] . " " . $datos_user['apellidop']. " " . $datos_user['apellidom'];
+        $nombre_completo = mb_strtoupper($nombre_completo);
+
+
+        $pdf = new \FPDF($orientation = 'L', $unit = 'mm', $format = 'A4');
+        $pdf->AddPage();
+        $pdf->SetFont('Arial', 'B', 8);    //Letra Arial, negrita (Bold), tam. 20
+        $pdf->setY(1);
+        $pdf->SetFont('Arial', 'B', 16);
+        // $pdf->Image('PDF/template/asistentes.png', 0, 0, 296, 210);
         // $pdf->SetFont('Arial', 'B', 25);
         // $pdf->Multicell(133, 80, $clave_ticket, 0, 'C');
 
