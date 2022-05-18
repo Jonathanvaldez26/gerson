@@ -860,7 +860,7 @@ html;
         $data->_apellidop = MasterDom::getData('apellidop');
         $data->_apellidom = MasterDom::getData('apellidom');
         $data->_email = MasterDom::getData('email');
-        $data->_prefijo = MasterDom::getData('prefijo');
+        // $data->_prefijo = MasterDom::getData('prefijo');
         $data->_especialidad = MasterDom::getData('especialidad');
         $data->_telefono = MasterDom::getData('telefono');
         $data->_pais = MasterDom::getData('pais');
@@ -1377,7 +1377,7 @@ html;
                                 <span id="msg_email" style="font-size: 0.75rem; font-weight: 700;margin-bottom: 0.5rem;"></span>
                             </div>
 
-                            <div class="form-group col-md-4">
+                            <!--<div class="form-group col-md-4">
                                 <label class="control-label col-md-12 col-sm-1 col-xs-12" for="prefijo">Prefijo <span class="required">*</span></label>
                                 <select class="multisteps-form__select form-control all_input_select" name="prefijo" id="prefijo" required>
                                 <option value="" selected disabled>Seleciona una opción</option>
@@ -1387,7 +1387,7 @@ html;
                                 <option value="Sra.">Sra.</option>                          
                                 
                                 </select>
-                            </div>
+                            </div>-->
 
                            
 

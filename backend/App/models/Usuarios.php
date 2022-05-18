@@ -105,7 +105,7 @@ sql;
     public static function update($data){
       $mysqli = Database::getInstance(true);
       $query=<<<sql
-      UPDATE registrados SET nombre = :nombre, apellidop = :apellidop, apellidom = :apellidom, prefijo = :prefijo, telefono = :telefono, id_pais = :id_pais, id_estado= :id_estado WHERE email = :email
+      UPDATE registrados SET nombre = :nombre, apellidop = :apellidop, apellidom = :apellidom, telefono = :telefono, id_pais = :id_pais, id_estado= :id_estado WHERE email = :email
 sql;
 
     
@@ -113,7 +113,7 @@ sql;
         ':nombre'=>$data->_nombre,
         ':apellidop'=>$data->_apellidop,
         ':apellidom'=>$data->_apellidom,
-        ':prefijo'=>$data->_prefijo,
+        // ':prefijo'=>$data->_prefijo,
         ':telefono'=>$data->_telefono,
         ':id_pais'=>$data->_pais,
         ':id_estado' =>$data->_estado,
