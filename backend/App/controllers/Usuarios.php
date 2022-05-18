@@ -1531,7 +1531,8 @@ html;
 
         $nombre = explode(" ", $datos_user['nombre']);
 
-        $nombre_completo = $datos_user['prefijo'] . " " . $nombre[0] . " " . $datos_user['apellidop']. " " . $datos_user['apellidom'];
+        // $nombre_completo = $datos_user['prefijo'] . " " . $nombre[0] . " " . $datos_user['apellidop']. " " . $datos_user['apellidom'];
+        $nombre_completo = $nombre[0] . " " . $datos_user['apellidop']. " " . $datos_user['apellidom'];
         $nombre_completo = mb_strtoupper($nombre_completo);
 
 
