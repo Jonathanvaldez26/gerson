@@ -1454,7 +1454,7 @@ html;
         $nombre_uno = explode(" ", $datos_user['nombre']);
         $primer_nombre = $nombre_uno[0];
 
-        $nombre_completo = mb_strtoupper($primer_nombre) . "\n" . mb_strtoupper($datos_user['apellidop'])."\n". mb_strtoupper($datos_user['apellidom']);
+        $nombre_completo = mb_strtoupper($datos_user['nombre']) . "\n" . mb_strtoupper($datos_user['apellidop'])."\n". mb_strtoupper($datos_user['apellidom']);
 
         
 
