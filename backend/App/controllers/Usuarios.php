@@ -1276,9 +1276,9 @@ html;
         foreach (GeneralDao::getAllColaboradoresByName($name) as $key => $value) {
           
 
-            $value['apellidop'] = utf8_encode($value['apellidop']);
-            $value['apellidom'] = utf8_encode($value['apellidom']);
-            $value['nombre'] = utf8_encode($value['nombre']);
+            // $value['apellidop'] = utf8_encode($value['apellidop']);
+            // $value['apellidom'] = utf8_encode($value['apellidom']);
+            // $value['nombre'] = utf8_encode($value['nombre']);
 
             // if (empty($value['img']) || $value['img'] == null) {
             //     $img_user = "/img/user.png";
