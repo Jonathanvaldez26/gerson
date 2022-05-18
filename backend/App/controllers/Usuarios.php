@@ -1475,7 +1475,7 @@ html;
         //$num_linea2 =utf8_decode("Línea: 39");
 
         $pdf->SetXY(0, 327);
-        $pdf->SetFont('Arial', 'B', 24);
+        $pdf->SetFont('Arial', 'B', 22);
         #4D9A9B
         $pdf->SetTextColor(0, 0, 0);
         $pdf->Multicell(95, 10, utf8_decode($nombre_completo), 0, 'C');
