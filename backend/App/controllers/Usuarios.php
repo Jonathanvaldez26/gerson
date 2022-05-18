@@ -1474,7 +1474,7 @@ html;
         //$num_linea =utf8_decode("Línea: 39");
         //$num_linea2 =utf8_decode("Línea: 39");
 
-        $pdf->SetXY(5, 327);
+        $pdf->SetXY(0, 327);
         $pdf->SetFont('Arial', 'B', 25);
         #4D9A9B
         $pdf->SetTextColor(0, 0, 0);
