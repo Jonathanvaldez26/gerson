@@ -1496,10 +1496,18 @@ html;
         $apellidos_ = explode(" ", $apellidos);
         $primer_apellido = $apellidos_[0];
         $segundo_apellido = $apellidos_[1];
+        $tercer_apellido = $apellidos_[2];
+        $cuarto_apellido = $apellidos_[3];
+
+        if(count($apellidos_) >= 3){
+            $nombre_completo = mb_strtoupper($nombre) . "\n" . mb_strtoupper($primer_apellido) . "\n" . mb_strtoupper($segundo_apellido). " " . mb_strtoupper($tercer_apellido) . " " . mb_strtoupper($cuarto_apellido);
+        }else{
+            $nombre_completo = mb_strtoupper($nombre) . "\n" . mb_strtoupper($primer_apellido) . "\n" . mb_strtoupper($segundo_apellido);
+        }
 
         // $nombre_completo = mb_strtoupper($primer_nombre) . "\n" . mb_strtoupper($datos_user['apellidop']);
 
-        $nombre_completo = mb_strtoupper($nombre) . "\n" . mb_strtoupper($primer_apellido) . "\n" . mb_strtoupper($segundo_apellido);
+        
 
         
 
