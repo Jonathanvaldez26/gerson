@@ -1500,7 +1500,7 @@ html;
         $cuarto_apellido = $apellidos_[3];
 
         if(count($apellidos_) >= 3){
-            $nombre_completo = mb_strtoupper($nombre) . "\n" . mb_strtoupper($primer_apellido) . "\n" . mb_strtoupper($segundo_apellido). " " . mb_strtoupper($tercer_apellido) . " " . mb_strtoupper($cuarto_apellido);
+            $nombre_completo = mb_strtoupper($nombre) . "\n" . mb_strtoupper($primer_apellido) . "\n" . mb_strtoupper($segundo_apellido). " " . mb_strtoupper($tercer_apellido) . "\n" . mb_strtoupper($cuarto_apellido);
         }else{
             $nombre_completo = mb_strtoupper($nombre) . "\n" . mb_strtoupper($primer_apellido) . "\n" . mb_strtoupper($segundo_apellido);
         }
