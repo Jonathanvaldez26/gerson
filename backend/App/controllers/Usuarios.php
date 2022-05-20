@@ -856,9 +856,9 @@ html;
     public function updateData()
     {
         $data = new \stdClass();            
-        $data->_nombre = utf8_encode(MasterDom::getData('nombre'));
-        $data->_apellidop = utf8_encode(MasterDom::getData('apellidop'));
-        $data->_apellidom = utf8_encode(MasterDom::getData('apellidom'));
+        $data->_nombre = MasterDom::getData('nombre');
+        $data->_apellidop = MasterDom::getData('apellidop');
+        $data->_apellidom = MasterDom::getData('apellidom');
         $data->_email = MasterDom::getData('email');
         // $data->_prefijo = MasterDom::getData('prefijo');
         $data->_especialidad = MasterDom::getData('especialidad');
