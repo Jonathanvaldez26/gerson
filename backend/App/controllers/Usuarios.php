@@ -1564,11 +1564,11 @@ html;
         //$num_linea =utf8_decode("Línea: 39");
         //$num_linea2 =utf8_decode("Línea: 39");
 
-        $pdf->SetXY(40, 84);
+        $pdf->SetXY(10, 84);
         $pdf->SetFont('Arial', 'B', 30);
         #4D9A9B
         $pdf->SetTextColor(0, 0, 0);
-        $pdf->Multicell(220, 10, utf8_decode($nombre_completo), 0, 'C');
+        $pdf->Multicell(270, 10, utf8_decode($nombre_completo), 0, 'C');
         $pdf->Output();
         // $pdf->Output('F','constancias/'.$clave.$id_curso.'.pdf');
 
@@ -1578,7 +1578,7 @@ html;
     public function abrirConstanciaP($clave, $id_curso = null)
     {
         date_default_timezone_set("America/Mexico_City");   
-             
+
         // $this->generaterQr($clave_ticket);
         $datos_user = UsuariosDao::getUserRegisterByClave($clave)[0];
         
@@ -1611,11 +1611,11 @@ html;
         //$num_linea =utf8_decode("Línea: 39");
         //$num_linea2 =utf8_decode("Línea: 39");
 
-        $pdf->SetXY(40, 84);
+        $pdf->SetXY(10, 84);
         $pdf->SetFont('Arial', 'B', 30);
         #4D9A9B
         $pdf->SetTextColor(0, 0, 0);
-        $pdf->Multicell(220, 10, utf8_decode($nombre_completo), 0, 'C');
+        $pdf->Multicell(270, 10, utf8_decode($nombre_completo), 0, 'C');
         $pdf->Output();
         // $pdf->Output('F','constancias/'.$clave.$id_curso.'.pdf');
 
