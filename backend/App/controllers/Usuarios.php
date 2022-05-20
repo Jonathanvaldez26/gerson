@@ -1564,7 +1564,7 @@ html;
         //$num_linea =utf8_decode("Línea: 39");
         //$num_linea2 =utf8_decode("Línea: 39");
 
-        $pdf->SetXY(40, 87);
+        $pdf->SetXY(40, 84);
         $pdf->SetFont('Arial', 'B', 30);
         #4D9A9B
         $pdf->SetTextColor(0, 0, 0);
@@ -1577,10 +1577,18 @@ html;
 
     public function abrirConstanciaP($clave, $id_curso = null)
     {
+        date_default_timezone_set("America/Mexico_City");        
 
+     
         // $this->generaterQr($clave_ticket);
-
         $datos_user = UsuariosDao::getUserRegisterByClave($clave)[0];
+        
+        // $data = new \stdClass();            
+        // $data->_id_registrado = $datos_user['id_registrado'];
+        // $data->_tipo_constancia = "Constancia_Presencial";
+        // $data->_fecha_descarga = date("Y-m-d h:i:s");
+ 
+        // $id = UsuariosDao::insertConstanciaFechaDescarga($data);
 
         // $nombre = explode(" ", $datos_user['nombre']);
 
@@ -1604,7 +1612,7 @@ html;
         //$num_linea =utf8_decode("Línea: 39");
         //$num_linea2 =utf8_decode("Línea: 39");
 
-        $pdf->SetXY(40, 87);
+        $pdf->SetXY(40, 84);
         $pdf->SetFont('Arial', 'B', 30);
         #4D9A9B
         $pdf->SetTextColor(0, 0, 0);
