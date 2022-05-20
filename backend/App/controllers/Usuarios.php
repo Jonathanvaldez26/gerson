@@ -856,9 +856,9 @@ html;
     public function updateData()
     {
         $data = new \stdClass();            
-        $data->_nombre = MasterDom::getData('nombre');
-        $data->_apellidop = MasterDom::getData('apellidop');
-        $data->_apellidom = MasterDom::getData('apellidom');
+        $data->_nombre = utf8_encode(MasterDom::getData('nombre'));
+        $data->_apellidop = utf8_encode(MasterDom::getData('apellidop'));
+        $data->_apellidom = utf8_encode(MasterDom::getData('apellidom'));
         $data->_email = MasterDom::getData('email');
         // $data->_prefijo = MasterDom::getData('prefijo');
         $data->_especialidad = MasterDom::getData('especialidad');
@@ -1615,7 +1615,7 @@ html;
         $pdf->SetFont('Arial', 'B', 30);
         #4D9A9B
         $pdf->SetTextColor(0, 0, 0);
-        $pdf->Multicell(270, 10, $nombre_completo, 0, 'C');
+        $pdf->Multicell(270, 10, utf8_decode($nombre_completo), 0, 'C');
         $pdf->Output();
         // $pdf->Output('F','constancias/'.$clave.$id_curso.'.pdf');
 
