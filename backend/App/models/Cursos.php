@@ -34,12 +34,12 @@ sql;
     public static function getAllUsersCourseByClave($clave){       
       $mysqli = Database::getInstance();
       $query=<<<sql
-      SELECT re.codigo_beca,re.nombre, re.apellidop, re.apellidom, ac.id_asigna_curso, ac.id_curso, ac.id_registrado, cu.nombre as nombre_curso, cu.horario_transmision, cu.fecha_curso, cu.duracion, pc.*
+      SELECT re.codigo_beca,re.nombre, re.apellidop, re.apellidom, ac.id_asigna_curso, ac.id_curso, ac.id_registrado, cu.nombre as nombre_curso, cu.horario_transmision, cu.fecha_curso, cu.duracion, pc.segundos, pc.fecha_ultima_vista
       FROM registrados re 
       INNER JOIN asigna_curso ac ON (re.id_registrado = ac.id_registrado)
       INNER JOIN cursos cu ON (cu.id_curso = ac.id_curso)
-      LEFT JOIN progresos_cursos pc ON (pc.id_curso = ac.id_curso)
-      WHERE re.clave = '$clave'
+   	  INNER JOIN progresos_cursos pc ON(pc.id_curso = ac.id_curso)
+      WHERE re.clave = '$clave' GROUP BY ac.id_asigna_curso;
 sql;
       return $mysqli->queryAll($query);
       
