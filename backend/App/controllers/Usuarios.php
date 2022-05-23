@@ -867,7 +867,9 @@ html;
         $data->_estado = MasterDom::getData('estado');
         // $data->_utilerias_administrador_id = $_SESSION['utilerias_administradores_id'];
 
-        // var_dump($data);
+         var_dump($data);
+
+         exit;
 
         $id = UsuariosDao::update($data);
 
