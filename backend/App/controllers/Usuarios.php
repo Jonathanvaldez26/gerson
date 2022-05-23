@@ -822,7 +822,8 @@ html;
         View::set('optionEspecialidad', $optionEspecialidad);
         View::set('optionPais', $optionPais);
         View::set('tabla', $this->getAllColaboradoresAsignadosByName($search));
-        View::set('modalEdit',$modalEdit);  
+        View::set('modalEdit',$modalEdit); 
+        View::set('search',$search); 
         View::render("usuarios_all");
     }
 
@@ -867,9 +868,9 @@ html;
         $data->_estado = MasterDom::getData('estado');
         // $data->_utilerias_administrador_id = $_SESSION['utilerias_administradores_id'];
 
-        var_dump($data);
+        // var_dump($data);
 
-        exit;
+        // exit;
 
         $id = UsuariosDao::update($data);
 
