@@ -38,7 +38,7 @@ sql;
       FROM registrados re 
       INNER JOIN asigna_curso ac ON (re.id_registrado = ac.id_registrado)
       INNER JOIN cursos cu ON (cu.id_curso = ac.id_curso)
-   	  INNER JOIN progresos_cursos pc ON(pc.id_curso = ac.id_curso)
+   	  LEFT JOIN progresos_cursos pc ON(pc.id_curso = ac.id_curso)
       WHERE re.clave = '$clave' GROUP BY ac.id_asigna_curso;
 sql;
       return $mysqli->queryAll($query);
