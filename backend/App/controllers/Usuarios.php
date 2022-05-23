@@ -856,9 +856,9 @@ html;
     public function updateData()
     {
         $data = new \stdClass();            
-        $data->_nombre = utf8_decode(MasterDom::getData('nombre'));
-        $data->_apellidop = utf8_encode(MasterDom::getData('apellidop'));
-        $data->_apellidom = utf8_encode(MasterDom::getData('apellidom'));
+        $data->_nombre = MasterDom::getData('nombre');
+        $data->_apellidop = MasterDom::getData('apellidop');
+        $data->_apellidom = MasterDom::getData('apellidom');
         $data->_email = MasterDom::getData('email');
         // $data->_prefijo = MasterDom::getData('prefijo');
         $data->_especialidad = MasterDom::getData('especialidad');
@@ -867,9 +867,9 @@ html;
         $data->_estado = MasterDom::getData('estado');
         // $data->_utilerias_administrador_id = $_SESSION['utilerias_administradores_id'];
 
-         var_dump($data);
+        var_dump($data);
 
-         exit;
+        exit;
 
         $id = UsuariosDao::update($data);
 
